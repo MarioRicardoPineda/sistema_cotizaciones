@@ -1,0 +1,71 @@
+[
+    {
+        "codCotizacion": "1234",
+        "clientes": "Ricardo",
+        "encargado": "Mario",
+        "producto": "Laptop",
+        "descripcion": "Esta es una descripcion, no muy larga, pero es una descripcion",
+        "estado": "En Proceso",
+        "fecha": "12-12-12"
+    },
+
+    {
+        "codCotizacion": "2323",
+        "clientes": "Roberto",
+        "encargado": "Marvin",
+        "producto": "SmartPhone",
+        "descripcion": "Esta es una descripcion, no muy larga, pero es una descripcion",
+        "estado": "Aceptada",
+        "fecha": "13-01-18"
+    },
+
+    {
+        "codCotizacion": "5454",
+        "clientes": "Juan",
+        "encargado": "Yoni",
+        "producto": "Monitos",
+        "descripcion": "Esta es una descripcion, no muy larga, pero es una descripcion",
+        "estado": "Rechazada",
+        "fecha": "09-04-18"
+    },
+
+    {
+        "codCotizacion": "9090",
+        "clientes": "Alberto",
+        "encargado": "Jorge",
+        "producto": "Audifonos",
+        "descripcion": "Esta es una descripcion, no muy larga, pero es una descripcion",
+        "estado": "Expirada",
+        "fecha": "29-05-16"
+    },
+
+    {
+        "codCotizacion": "4343",
+        "clientes": "Jairo",
+        "encargado": "Walter",
+        "producto": "Pc",
+        "descripcion": "Esta es una descripcion, no muy larga, pero es una descripcion",
+        "estado": "en Proceso",
+        "fecha": "30-01-17"
+    },
+
+    {
+        "codCotizacion": "5656",
+        "clientes": "Adonay",
+        "encargado": "Samuel",
+        "producto": "Bocinas",
+        "descripcion": "Esta es una descripcion, no muy larga, pero es una descripcion",
+        "estado": "Aceptada",
+        "fecha": "29-05-16"
+    },
+    {
+        "codCotizacion": "4590",
+        "clientes": "Maria",
+        "encargado": "Lorena",
+        "producto": "Televisor",
+        "descripcion": "Esta es una descripcion, no muy larga, pero es una descripcion",
+        "estado": "Rechazada",
+        "fecha": "29-05-16"
+    }
+]
+

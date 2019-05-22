@@ -1,0 +1,58 @@
+[
+    {
+        "codigo":"1212",
+        "producto": "Laptop",
+        "precio": 10.00,
+        "stock": 100,
+        "estado": "Activo",
+        "marca": "Lenovo",
+        "fabricante": "Lenovo"
+    },
+    {
+        "codigo":"3232",
+        "producto": "SmartPhone",
+        "precio": 20.00,
+        "stock": 80,
+        "estado": "inactivo",
+        "marca": "Samgsung",
+        "fabricante": "Samgsung"
+    },
+    {
+        "codigo":"5656",
+        "producto": "Monitor",
+        "precio": 30.00,
+        "stock": 45,
+        "estado": "Activo",
+        "marca": "Dell",
+        "fabricante": "Dell"
+    },
+    {
+        "codigo":"6767",
+        "producto": "Teclado",
+        "precio": 15.00,
+        "stock": 250,
+        "estado": "Activo",
+        "marca": "Imax",
+        "fabricante": "Imax"
+    },
+    {
+        "codigo":"2020",
+        "producto": "mouse",
+        "precio": 5.00,
+        "stock": 300,
+        "estado": "inactivo",
+        "marca": "Omega",
+        "fabricante": "Omega"
+    },
+    {
+        "codigo":"4747",
+        "producto": "Audifono",
+        "precio": 25.00,
+        "stock": 30,
+        "estado": "Activo",
+        "marca": "dr.dre",
+        "fabricante": "Beats"
+    }
+
+
+]

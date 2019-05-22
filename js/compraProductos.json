@@ -1,0 +1,39 @@
+[
+    {
+        "codigo":"1212",
+        "producto": "Laptop",
+        "marca": "Lenovo",
+        "precio": 10.00
+    },
+    {
+        "codigo":"3232",
+        "producto": "SmartPhone",
+        "marca": "Samgsung",
+        "precio": 20.00
+    },
+    {
+        "codigo":"5656",
+        "producto": "Monitor",
+        "marca": "Dell",
+        "precio": 30.00
+    },
+    {
+        "codigo":"6767",
+        "producto": "Teclado",
+        "marca": "Imax",
+        "precio": 15.00
+    },
+    {
+        "codigo":"2020",
+        "producto": "mouse",
+        "marca": "Omega",
+        "precio": 5.00
+    },
+    {
+        "codigo":"4747",
+        "producto": "Audifono",
+        "marca": "dr.dre",
+        "precio": 25.00
+    }
+]
+

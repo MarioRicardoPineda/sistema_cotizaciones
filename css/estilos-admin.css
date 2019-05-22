@@ -1,0 +1,792 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-main: #214961;
+    --color-secundary: #95CA3E;
+    --color-text: #fff;
+}
+body{
+    background-color: #eee;
+    font-family: 'Roboto', sans-serif; 
+    margin-top: 4em;
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* ************************* Al cargar la pagina ********************* */
+.bgload{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 200;
+    background-color: #fff;
+
+}
+
+.loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+}
+
+.barra{
+    width: 8px;
+    height: 40px;
+    background-color: #000;
+    margin: 0 4px;
+    border-radius: 10px;
+    animation: loading 0.8s infinite;
+}
+
+.barra:nth-child(2){
+    animation-delay: 0.1s;
+}
+.barra:nth-child(3){
+    animation-delay: 0.2s;
+}
+.barra:nth-child(4){
+    animation-delay: 0.3s;
+}
+.barra:nth-child(5){
+    animation-delay: 0.4s;
+}
+.barra:nth-child(6){
+    animation-delay: 0.5s;
+}
+.barra:nth-child(7){
+    animation-delay: 0.6s;
+}
+.barra:nth-child(8){
+    animation-delay: 0.7s;
+}
+
+
+@keyframes loading {
+    0%{
+        height: 0;
+    }
+    50%{
+        height: 40px;
+    }
+    100%{
+        height: 0;
+    }
+} 
+
+/************ Menu ************/
+
+.header{
+    background-color:var(--color-main);
+    height: 4em;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, .5);
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav{
+    line-height: 64px;
+}
+
+.main-menu{
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu__item{
+    list-style: none;
+    transition: .3s;
+}
+
+.menu__link{
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 20px;
+    transition: .2s;
+}
+.margin{
+    margin-right: 10px;
+}
+/* ************************************* */
+
+/********** Save cash **********/
+
+.banner__tittle{
+    width: 100px;
+    height: 55px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    position: relative;
+    top:5px;
+}
+
+.save{
+    color: var(--color-secundary);
+
+}
+
+.cash{
+    color: var(--color-secundary);
+}
+
+.hidden{
+    max-width: 0;
+    opacity: 0;
+    transition: .5s ease-in;
+}
+
+.banner__tittle:hover .hidden{
+    max-width: 1em;
+    opacity: 1;
+} 
+
+.menu__link:hover{
+    color: var(--color-secundary);
+}
+
+.menu__link:active{
+    box-shadow: 0 0 1px var(--color-text);
+    font-size: 18px;
+    padding: 10px;
+    transition: .2s;
+    border-radius: 10px;
+}
+/* ****************************************************** */
+
+/*********** Sub-Menu ***********/
+.sub-menu{
+    width: 170px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: var(--color-text);
+    text-align: center;
+    transform: translateY(-5px);
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, .3);
+    border-radius: 20px;
+    position: absolute;
+    display: none;
+    
+}
+
+.font{
+    font-size: 50px;
+}
+
+.sub-menu::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-text);
+    transform: translate(40px,-10px) rotate(45deg);
+    
+}
+
+.submenu__item{
+    list-style: none;
+}
+
+.divide{
+    background-color:rgba(200, 200, 200, .7);
+    display: block;
+    width: 80%;
+    height: 2px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.menu__link--hover{
+    text-decoration: none;
+    color: var(--color-main);
+    padding: 15px;
+    transition: .3s;
+}
+
+.menu__link--hover:hover{
+    font-size: 18px;
+}
+
+/* ********************************************************* */
+
+/********** Animaciones **********/
+
+.bounceInDown {
+    animation: bounceInDown 1s;
+  }
+
+  @keyframes bounceInDown {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -40px, 0);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: translate3d(0, 15px, 0);
+    }
+  
+    75% {
+      transform: translate3d(0, -10px, 0);
+    }
+  
+    90% {
+      transform: translate3d(0, 5px, 0);
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  /* *************************************************** */
+
+  /************** Buscador de cotizaciones **************/
+
+  .search{
+    margin-top: 100px;
+    padding: 10px;
+  }
+
+  .search__action{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-main);
+    border-radius: 50px;
+    height: 50px;
+    padding: 10px;
+}
+h2{
+    font-size: 35px;
+}
+
+.search__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.new{
+    text-decoration: none;
+    font-size: 20px;
+    color:var(--color-text);
+    background-color: var(--color-secundary);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .4);
+      
+  }
+  
+  .new:active{
+    font-size: 19px;
+    transition: .5s;
+    box-shadow: none;
+  }
+
+  .buscador{
+    border-radius: 10px;
+    padding: 0;
+    color: var(--color-text);
+    width: 0;
+    border: none;
+    background: none;
+    outline: none;
+    float:left;
+    font-size: 17px;
+    transition: .3s;
+  }
+
+  .buscador::placeholder{
+    color: rgba(255, 255, 255, .7)
+  }
+
+.search__icon{
+    color:var(--color-text);
+    border-radius: 5px;
+    border-radius: 50%;
+    color: #fff;
+    float: right;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+/* ********************************************************************** */
+
+/* ********************** Tablas de cotizaciones ********************** */
+
+section{
+    margin-bottom: 30px;
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.table__head{
+    background-color: var(--color-main);
+    color: var(--color-text);
+    
+}
+
+.table__head th:first-child{
+    width: 80px;
+}
+
+.table__head th{
+    padding: 10px;
+}
+
+.table__body td{
+    padding: 10px;
+    text-align: center;
+}
+/* ****************************************************** */
+
+/* ************ Colores según cotización ************** */
+.estado{
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.blue{
+    background-color: #03A9F4;
+    color: #fff;
+}
+
+.gray{
+    background-color: #9e9e9e;
+    color: var(--color-text);
+}
+
+.red{
+    background-color: #F44336;
+    color: var(--color-text);
+}
+
+.green{
+    background-color: #8BC34A;
+    color: var(--color-text);
+}
+
+/* ********************************************************* */
+
+.table__body tr:nth-child(2n){
+    background-color: hsl(203, 49%, 80%);
+}
+
+.table__body tr:hover{
+    background-color: hsl(203, 49%, 70%);
+    color:var(--color-text);
+}
+
+.borde{
+    border: 1px solid;
+}
+
+.table_des{
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 230px;
+    white-space: nowrap;
+    display: block;
+    margin-right: -100px;
+}
+
+/* ************************************************************** */
+
+/* ***************************** formulario de cotización ********************************** */
+
+.cotizacion-form{
+    margin-top: 7em;
+}
+
+.form__input{
+    border:solid 1px #ccc;
+    padding: 12px;
+    border-radius: 5px;
+    width: 200px; 
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.form__input:focus{
+    box-shadow: 0 0 4px 2px rgba(149, 202, 62, 0.6);
+    transition: .3s;
+}
+
+.container-form{
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form label{
+    margin-bottom: 15px;
+    display: block;
+    font-size: 20px;
+}
+.form{
+    display: flex;
+    justify-content: space-around;
+}
+.container__input{
+    width: 320px;
+    text-align: center;
+}
+
+.cotizacion-form h1{
+    margin-bottom: 30px;
+    font-size: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.container__btn{
+    display: flex;
+    justify-content: center;
+    margin:0 15px;
+    margin-top: 40px;
+    padding: 10px;
+}
+.btn{
+    text-decoration: none;
+    padding: 10px;
+    color:var(--color-text);
+    border-radius: 8px;
+}
+
+.pro{
+    background-color: var(--color-secundary);
+}
+
+.imp{
+    background-color: var(--color-main);
+}
+
+.graficos .container{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* **************** Estilos del Modal ********************* */
+
+.flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    width: 100%;
+}
+
+.contenidoModal{
+    position: relative;
+    background-color: #fff;
+    margin: auto;
+    width: 70%;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
+    animation: .7s modal; 
+}
+
+@keyframes modal{
+    from{top:-330px; opacity: 0;}
+    to{top:0; opacity: 1;}
+}
+
+.close{
+    color: #f2f2f2;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover{
+    color: #f00;
+    cursor: pointer;
+}
+
+.fa-times:hover{
+    transition: .5s;
+    transform: rotate(360deg)
+}
+
+.title{
+    font-size: 30px;
+}
+
+.modal-header, .modal-footer{
+    padding: 8px 16px;
+    background-color: #34495e;
+    color: #f2f2f2;
+}
+
+.modal-body{
+    padding: 20px 16px;
+}
+
+.searchModal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.searchModal h2{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.container-modal{
+    width: 97%;
+    margin: 0 auto;
+}
+
+/* ************************* FORMULARIO DE COTIZACIONES (MODAL) ************* */
+
+.formCotizaModal {
+    width: 60%;
+    min-height: 600px;
+    border: 1px solid var(--color-main);
+    border-radius: 20px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.block{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input_modal{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.btn-modal{
+    border: none;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-top: 10px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    transition: .5s;
+}
+.fa-location-arrow{
+    transform: rotate(45deg);
+
+}
+.fa-location-arrow:hover{
+    transition: .5s;
+    transform: rotate(405deg)
+}
+
+.btn-modal:hover{
+    border-radius: 0;
+}
+/* *************************************************************************** */
+
+/* ************************* TABLA PRODUCTOS MODAL ************************** */
+
+.table-pro--modal{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 17px;
+}
+
+.table-pro--modal thead{
+    background-color: hsl(110, 90%, 80%);
+}
+
+.table-pro--modal thead th{
+    padding: 10px;
+}
+
+.table-pro--modal td{
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.table-pro--modal input{
+    width: 70px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.table-pro--modal a{
+    text-decoration: none;
+    color: hsl(220, 1000%, 70%);
+    font-size: 25px;
+}
+
+/* ************************* TABLA DE PRODUCTOS ******************** */
+
+.table-pro{
+    width: 80%;
+    border-collapse: collapse;
+    font-size: 17px;
+    position: relative;
+    left: 20%;
+}
+
+.table-pro thead{
+    background-color: hsl(110, 90%, 80%);
+}
+
+.table-pro thead th{
+    padding: 10px;
+}
+
+.table-pro td{
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.table-pro input{
+    width: 70px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.table-pro a{
+    text-decoration: none;
+    color: hsl(220, 1000%, 70%);
+    font-size: 25px;
+}
+
+/* ******************************* TABLA DE LA COTIZACIÓN DE PRODUCTOS ***************************** */
+
+.table__body{
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+.table__foot td{
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.action{
+    text-decoration: none;
+    font-size: 17px;
+    margin:0 5px;
+}
+
+.edit{
+    color: hsl(200, 60%, 50%)
+}
+
+.trash{
+    color:#F44336;
+}
+
+.table__body3 td{
+    padding: 10px;
+    text-align: center;
+}
+
+.table__body3 tr:hover{
+    background-color: rgba(160, 160, 160, .3);
+    transition: .1s;
+}
+
+/* ********************************** PRODUCTOs **************************************** */
+.container-search{
+    width: 100%;
+    padding: 25px;
+    color: var(--color-text);
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* *************************** Menu sidebar de productos ****************************************** */
+.sidebar{
+    margin: 0;
+}
+.menu-sidebar{
+    width: 20%;
+    min-height: 100%;
+    background-color: var(--color-main) ;
+    position: fixed;
+    top: 4em;
+}
+
+.sidebar__item{
+    list-style: none;
+    padding: 10px 0;
+}
+
+.sidebar__link{
+    border-bottom: 1px solid rgba(120, 170, 230, .6);
+    text-decoration: none;
+    color: var(--color-text);
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.productos{
+    display: flex;
+}
+
+.form-producto{
+    width: 100%;
+    margin: 0;
+}
+

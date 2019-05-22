@@ -1,0 +1,72 @@
+[
+    {
+        "id":"1",
+        "nombre":"Sofía",
+        "email": "sofia@mail.com",
+        "password":"sofia",
+        "tipo":"usuario"
+    },
+    {
+        "id":"2",
+        "nombre":"Alberto",
+        "email": "alberto@mail.com",
+        "password":"alberto",
+        "tipo":"usuario"
+    },
+    {
+        "id":"3",
+        "nombre":"Ricardo",
+        "email": "ricardo@mail.com",
+        "password":"ricardo",
+        "tipo":"admin"
+    },
+    {
+        "id":"4",
+        "nombre":"Jorge",
+        "email": "jorge@mail.com",
+        "password":"jorge",
+        "tipo":"usuario"
+    },
+    {
+        "id":"5",
+        "nombre":"Krisia",
+        "email": "krisia@mail.com",
+        "password":"krisia",
+        "tipo":"usuario"
+    },
+    {
+        "id":"6",
+        "nombre":"Ruth",
+        "email": "ruth@mail.com",
+        "password":"ruth",
+        "tipo":"usuario"
+    },
+    {
+        "id":"7",
+        "nombre":"Juan",
+        "email": "juan@mail.com",
+        "password":"juan",
+        "tipo":"admin"
+    },
+    {
+        "id":"8",
+        "nombre":"Carlos",
+        "email": "carlos@mail.com",
+        "password":"carlos",
+        "tipo":"usuario"
+    },
+    {
+        "id":"9",
+        "nombre":"Gerson",
+        "email": "gerson@mail.com",
+        "password":"gerson",
+        "tipo":"admin"
+    },
+    {
+        "id":"10",
+        "nombre":"Gabriela",
+        "email": "gaby@mail.com",
+        "password":"gabriela",
+        "tipo":"usuario"
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "id":"1",
+        "nombre":"Mario",
+        "direccion":"col.juan chica san salvador",
+        "telefono":"12122121",
+        "email": "mario@mail.com",
+        "tipoPersona": "Natural",
+        "nrc": "45039023"
+    },
+    {
+        "id":"2",
+        "nombre":"Ricardo",
+        "direccion":"col.soya san salvador",
+        "telefono":"21212121",
+        "email": "ricardo@mail.com",
+        "tipoPersona": "Natural",
+        "nrc": "78109201"
+    },
+    {
+        "id":"3",
+        "nombre":"Juan",
+        "direccion":"col.apopa san salvador",
+        "telefono":"34343434",
+        "email": "juan@mail.com",
+        "tipoPersona": "juridica",
+        "nrc": "34568990"
+    },
+    {
+        "id":"4",
+        "nombre":"Marvin",
+        "direccion":"col.san julian san salvador",
+        "telefono":"43434343",
+        "email": "marvin@mail.com",
+        "tipoPersona": "juridica",
+        "nrc": "12129078"
+    },
+    {
+        "id":"5",
+        "nombre":"Jairo",
+        "direccion":"col.zacamil san salvador",
+        "telefono":"45454545",
+        "email": "jairo@mail.com",
+        "tipoPersona": "Natural",
+        "nrc": "33221189"
+    },
+    {
+        "id":"6",
+        "nombre":"Jaime",
+        "direccion":"col. san salvador",
+        "telefono":"54545454",
+        "email": "jaime@mail.com",
+        "tipoPersona": "juridica",
+        "nrc": "67349078"
+    },
+    {
+        "id":"7",
+        "nombre":"Adonay",
+        "direccion":"col.rabida san salvador",
+        "telefono":"78787878",
+        "email": "adonay@mail.com",
+        "tipoPersona": "Natural",
+        "nrc": "45364543"
+    },
+    {
+        "id":"8",
+        "nombre":"Carolina",
+        "direccion":"col.san juan opico",
+        "telefono":"67676767",
+        "email": "carolina@mail.com",
+        "tipoPersona": "Natural",
+        "nrc": "61291643"
+    },
+    {
+        "id":"9",
+        "nombre":"Lorena",
+        "direccion":"col.soya san salvador",
+        "telefono":"87788778",
+        "email": "lorena@mail.com",
+        "tipoPersona": "Natural",
+        "nrc": "12345678"
+    },
+    {
+        "id":"10",
+        "nombre":"Wendy",
+        "direccion":"col.juan chica san salvador",
+        "telefono":"90909090",
+        "email": "wendy@mail.com",
+        "tipoPersona": "juridica",
+        "nrc": "45637820"
+    }
+]

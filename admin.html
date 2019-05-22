@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin | SaveCash</title>
+
+    <!-- Hojas de estilo externo -->
+
+    <link rel="stylesheet" href="css/estilos-admin.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Hojas externas de JavaScript -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body>
+
+    <div class="bgload"  id="load">
+        <div class="loading">
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <div class="barra"></div>
+        </div>
+    </div>
+    <!-- ----------------------- CABECERA --------------------------- -->
+
+    <header class="header">
+        <nav class="nav container">
+
+            <!-- ---------------- Menu Principal ---------------- -->
+
+            <ul class="main-menu">
+                <li class="menu__item">
+                    <a href="#" class="menu__link banner__tittle">
+                        <span class="save">S</span>
+                        <span class="hidden">a</span>
+                        <span class="hidden">v</span>
+                        <span class="hidden">e</span>
+                        <span class="cash">C</span>
+                        <span class="hidden">a</span>
+                        <span class="hidden">s</span>
+                        <span class="hidden">h</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="admin.html" class="menu__link">
+                        <i class="fas fa-clipboard-list margin"></i>Cotizaciones</a>
+                </li>
+                <li class="menu__item">
+                    <a href="producto.html" class="menu__link">
+                        <i class="fas fa-shopping-cart margin"></i>Productos</a>
+                </li>
+                <li class="menu__item">
+                    <a href="clientes.html" class="menu__link">
+                        <i class="fas fa-users margin"></i>Clientes</a>
+                </li>
+                <li class="menu__item">
+                    <a href="usuarios.html" class="menu__link">
+                        <i class="fas fa-users-cog margin"></i>Usuarios</a>
+                </li>
+                <li class="menu__item">
+
+                    <a href="#" class="menu__link" id="submenu">
+                        <i class="fas fa-user margin"></i>Admin</a>
+
+                    <!-- ----------------------- Sub-Menu ---------------------- - -->
+
+                    <ul class="sub-menu bounceInDown" id="drop">
+                        <li class="submenu__item">
+                            <a href="#" class="menu__link--hover">
+                                <i class="fas fa-user font"></i>
+                            </a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="menu__link--hover">Nombre</a>
+                        </li>
+                        <li class="submenu__item">
+                            <span class="divide"></span>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="menu__link--hover">Cerrar Sesión</a>
+                        </li>
+                    </ul>
+
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <section class="search">
+        <div class="container">
+
+            <div class="search__container">
+
+                <h2>SaveCash</h2>
+                <div class="search__action">
+                    <input type="search" name="search" id="buscador" class="buscador"
+                        placeholder="Buscar cotización...">
+                    <a href="#" id="btn" class="search__icon">
+                        <i class="fas fa-search"></i>
+                    </a>
+
+                </div>
+                <a href="cotizacion.html" class="new">
+                    <i class="fas fa-plus margin"></i> Nueva Cotización</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="graficos">
+        <div class="container">
+            <div id="chart" class="chart"></div>
+            <div id="chart2" class="chart"></div>
+            <div id="chart3" class="chart"></div>
+        </div>
+    </section>
+    <section class="graficos">
+        <div class="container">
+            <div id="chart" class="chart"></div>
+            <div id="chart2" class="chart"></div>
+            <div id="chart3" class="chart"></div>
+        </div>
+    </section>
+
+    <section class="tables">
+        <div class="container">
+            <table class="table">
+                <thead class="table__head">
+                    <tr>
+                        <th>Cod. Cotización</th>
+                        <th>Clientes</th>
+                        <th>Encargado</th>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Estado</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody class="table__body" id="res">
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="modal" id="miModal">
+            <div class="flex" id="flex">
+                <div class="contenidoModal">
+
+                    <div class="modal-header flex">
+                        <h3 class="title"> <i class="fas fa-clipboard-list margin"></i>Cotización de Ricardo Pineda</h3>
+                        <span class="close" id="close"><i class="fas fa-times"></i></span>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="container-modal">
+                            <form class="formCotizaModal">
+
+                                <label for="" class="block">N° cotización.</label>
+                                <input type="text" id="" value="1" class="block input_modal">
+
+                                <label for="" class="block">Cliente</label>
+                                <input type="text" id="" value="Ricardo" class="block input_modal">
+
+                                <label for="" class="block">Fecha</label>
+                                <input type="text" id="" value="12-12-12" class="block input_modal">
+
+                                <label for="" class="block">Modo de Pago</label>
+                                <input type="text" id="" value="Efectivo" class="block input_modal">
+
+                                <label for="" class="block">Fecha de Expiración</label>
+                                <input type="text" id="" value="23-09-23" class="block input_modal">
+
+                                <label for="" class="block">Usuario</label>
+                                <input type="text" id="" value="Juan" class="block input_modal">
+
+                                <label for="" class="block">Descripción</label>
+                                <textarea name="" id="" cols="61" rows="4">Una pequeña Descripción</textarea>
+
+                                <button type="button" class="btn-modal green"> Editar Cotizacion</button>
+
+                            </form>
+                        </div>
+                    </div>
+
+
+
+                    <div class="modal-footer">
+                        <h3>Cotizaciones SaveCash &COPY; 2019</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

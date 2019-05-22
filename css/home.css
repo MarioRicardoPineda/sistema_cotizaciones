@@ -1,0 +1,94 @@
+.home{
+    position: relative;
+}
+
+.home img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.main-banner {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(26, 53, 91, .8);
+    color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.banner__description{
+    padding: 10px;
+    width: 100%;
+}
+
+.banner__tittle{
+    font-size: 8em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.banner__tittle2{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 105px;
+}
+
+.hidden2{
+    max-width: 0;
+    opacity: 0;
+    transition: .5s ease-in;
+}
+
+.save{
+    color: var(--color-borde);
+
+}
+
+.cash{
+    color: var(--color-borde);
+}
+
+.hidden{
+    max-width: 0;
+    opacity: 0;
+    transition: .5s ease-in;
+    animation: text 4s infinite alternate;
+}
+
+.banner__tittle2:hover .hidden2{
+    max-width: 1em;
+    opacity: 1;
+}
+
+@keyframes text{
+    from{
+        max-width: 1em;
+        opacity: 1;
+        transition: .5s ease-out;
+    }
+    to{
+        max-width: 0;
+        opacity: 0;
+        transition: .5s ease-in;
+    }
+}
+
+
+.banner__txt{
+    font-size: 3em;
+}
